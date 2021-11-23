@@ -1,0 +1,15 @@
+.ecosystem {
+  &-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-iframe {
+    width: 80vmin;
+    height: 80vmin;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
