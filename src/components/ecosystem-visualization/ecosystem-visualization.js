@@ -1,8 +1,6 @@
 // https://observablehq.com/@heaversm/mozilla-ecosystem@196
 import MicroModal from "micromodal"; // es6 module
 
-import notebook from "./ecosystem-visualization";
-
 export default function define(runtime, observer) {
   MicroModal.init();
   const main = runtime.module();
@@ -39,8 +37,6 @@ Click to zoom in or out.`;
           .create("svg")
           .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
           .style("display", "block")
-          .style("margin", "0 -14px")
-          .style("background", color(0))
           .style("cursor", "pointer")
           .on("click", (event) => zoom(event, root));
 
@@ -87,8 +83,22 @@ Click to zoom in or out.`;
               return d.data.name;
             }
           })
+          .on("mouseover", function (event, d) {
+            if (d.data.repoImg) {
+              event.stopPropagation();
+              event.preventDefault();
+              d3.select(this).style("text-shadow", "1px 1px black");
+            }
+          })
+          .on("mouseout", function (event, d) {
+            if (d.data.repoImg) {
+              event.stopPropagation();
+              event.preventDefault();
+              d3.select(this).style("text-shadow", "none");
+            }
+          })
           .on("click", (event, d) => {
-            if (!d.data.value) {
+            if (!d.data.repoImg) {
               if (focus !== d) {
                 return zoom(event, d), event.stopPropagation();
               }
