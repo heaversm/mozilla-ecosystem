@@ -2,6 +2,15 @@
   @include center-both;
 }
 
+.flx {
+  display: flex;
+}
+
+.jst-cntr {
+  justify-content: center;
+  align-items: center;
+}
+
 .flx-col {
   flex-direction: column;
 }

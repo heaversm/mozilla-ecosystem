@@ -1,8 +1,13 @@
-// https://observablehq.com/@heaversm/zoomable-circle-packing@169
+// https://observablehq.com/@heaversm/mozilla-ecosystem@196
+import MicroModal from "micromodal"; // es6 module
+
+import notebook from "./ecosystem-visualization";
+
 export default function define(runtime, observer) {
+  MicroModal.init();
   const main = runtime.module();
   const fileAttachments = new Map([
-    ["ecosystem-data.json", "/ecosystem-data.json"],
+    ["ecosystem-visualization.json", "/files/ecosystem-data.json"],
   ]);
   main.builtin(
     "FileAttachment",
@@ -10,9 +15,15 @@ export default function define(runtime, observer) {
   );
   main.variable(observer()).define(["md"], function (md) {
     return md`
-# Zoomable Circle Packing
+# Mozilla Ecosystem
 
 Click to zoom in or out.`;
+  });
+  main.variable(observer()).define(["htl"], function (htl) {
+    return htl.html`<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+<style>body { border: 0; } footer { display: none }</style>`;
   });
   main
     .variable(observer("chart"))
@@ -38,7 +49,7 @@ Click to zoom in or out.`;
           .selectAll("circle")
           .data(root.descendants().slice(1))
           .join("circle")
-          .attr("fill", (d) => (d.children ? color(d.depth) : "white"))
+          .attr("fill", (d) => (d.children ? color(d.depth) : "#ffa266"))
           .attr("pointer-events", (d) => (!d.children ? "none" : null))
           .on("mouseover", function () {
             d3.select(this).attr("stroke", "#000");
@@ -54,15 +65,46 @@ Click to zoom in or out.`;
 
         const label = svg
           .append("g")
-          .style("font", "10px sans-serif")
-          .attr("pointer-events", "none")
+          .style("font", "16px sans-serif")
+          .style("font-family", "Inter")
+          .style("font-weight", "600")
+          //.attr("pointer-events", "none")
           .attr("text-anchor", "middle")
           .selectAll("text")
           .data(root.descendants())
           .join("text")
+          .style("fill", "#fff")
           .style("fill-opacity", (d) => (d.parent === root ? 1 : 0))
           .style("display", (d) => (d.parent === root ? "inline" : "none"))
-          .text((d) => d.data.name);
+          .text((d) => {
+            if (d.data.value) {
+              const repoSize =
+                d.data.value > 1000
+                  ? Math.round(d.data.value / 1000) + "mb"
+                  : d.data.value + "kb";
+              return `${d.data.name} ${repoSize}`;
+            } else {
+              return d.data.name;
+            }
+          })
+          .on("click", (event, d) => {
+            if (!d.data.value) {
+              if (focus !== d) {
+                return zoom(event, d), event.stopPropagation();
+              }
+            } else {
+              event.stopPropagation();
+              event.preventDefault();
+              const { repoImg, name } = d.data;
+              console.log("click", event.currentTarget, d.data.value);
+              const $modal = document.getElementById("modal");
+              const $modalTitle = $modal.querySelector(".modal__title");
+              const $modalImg = $modal.querySelector(".modal__img");
+              $modalTitle.innerText = name;
+              $modalImg.setAttribute("src", `files/${repoImg}`);
+              MicroModal.show("modal");
+            }
+          });
 
         zoomTo([root.x, root.y, root.r * 2]);
 
@@ -119,8 +161,7 @@ Click to zoom in or out.`;
   main
     .variable(observer("data"))
     .define("data", ["FileAttachment"], function (FileAttachment) {
-      console.log(FileAttachment("ecosystem-data.json"));
-      return FileAttachment("ecosystem-data.json").json();
+      return FileAttachment("ecosystem-visualization.json").json();
     });
   main
     .variable(observer("pack"))
@@ -145,11 +186,14 @@ Click to zoom in or out.`;
     return d3.format(",d");
   });
   main.variable(observer("color")).define("color", ["d3"], function (d3) {
-    return d3
-      .scaleLinear()
-      .domain([0, 5])
-      .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-      .interpolate(d3.interpolateHcl);
+    return (
+      d3
+        .scaleLinear()
+        .domain([0, 5])
+        //.range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+        .range(["#393473", "#ffa266"])
+        .interpolate(d3.interpolateHcl)
+    );
   });
   main.variable(observer("d3")).define("d3", ["require"], function (require) {
     return require("d3@6");

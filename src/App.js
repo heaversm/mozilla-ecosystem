@@ -1,6 +1,6 @@
 import "./styles/app.scss";
 import Ecosystem from "./components/d3-ecosystem";
-import ecosystemData from "./data/ecosystem-data.json";
+import Modal from "./components/modal";
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
         <h1 className="app-title">Mozilla Ecosystem</h1>
       </header>
       <main>
-        <Ecosystem data={ecosystemData} />
+        <Ecosystem />
+        <Modal />
       </main>
     </div>
   );

@@ -1,0 +1,317 @@
+{
+  "name": "Mozilla Ecosystem",
+  "children": [
+    {
+      "name": "Pocket",
+      "children": [
+        {
+          "name": "Extension",
+          "value": 2888,
+          "url": "https://github.com/Pocket/extension-save-to-pocket",
+          "repoImg": "pocket-extension.svg"
+        },
+        {
+          "name": "iOS",
+          "value": 1381,
+          "url": "https://github.com/Pocket/pocket-ios",
+          "repoImg": "pocket-ios.svg"
+        },
+        {
+          "name": "Android",
+          "value": 1381,
+          "url": ""
+        },
+        {
+          "name": "Collection API",
+          "value": 14870,
+          "url": "https://github.com/Pocket/collection-api",
+          "repoImg": "pocket-collection-api.svg"
+        },
+        {
+          "name": "Marketing",
+          "value": 32032,
+          "url": "https://github.com/Pocket/pocket-marketing-pages",
+          "repoImg": "pocket-marketing-pages.svg"
+        },
+        {
+          "name": "New Tab",
+          "value": 554,
+          "url": "https://github.com/Pocket/extension-pocket-new-tab",
+          "repoImg": "pocket-newtab.svg"
+        },
+        {
+          "name": "Recommendation API",
+          "value": 4290,
+          "url": "https://github.com/Pocket/recommendation-api",
+          "repoImg": "pocket-recommendation-api.svg"
+        },
+        {
+          "name": "Related Content API",
+          "value": 1607,
+          "url": "https://github.com/Pocket/related-content-api",
+          "repoImg": "pocket-related-content-api.svg"
+        }
+      ]
+    },
+    {
+      "name": "Hubs",
+      "children": [
+        {
+          "name": "Ops",
+          "value": 31908,
+          "url": "https://github.com/mozilla/hubs-ops",
+          "repoImg": "hubs-ops.svg"
+        },
+        {
+          "name": "Reticulum",
+          "value": 13864,
+          "url": "https://github.com/mozilla/reticulum",
+          "repoImg": "hubs-reticulum.svg"
+        },
+        {
+          "name": "Spoke",
+          "value": 111801,
+          "url": "https://github.com/mozilla/Spoke",
+          "repoImg": "hubs-spoke.svg"
+        },
+        {
+          "name": "Website",
+          "value": 13864,
+          "url": "https://github.com/mozilla/hubs",
+          "repoImg": "hubs.svg"
+        },
+        {
+          "name": "Firefox Reality",
+          "value": 149717,
+          "url": "https://github.com/MozillaReality/FirefoxReality",
+          "repoImg": "firefox-reality.svg"
+        }
+      ]
+    },
+    {
+      "name": "Experiments",
+      "children": [
+        {
+          "name": "Experimenter",
+          "children": [
+            {
+              "name": "Normandy",
+              "value": 18079,
+              "url": "https://github.com/mozilla/normandy",
+              "repoImg": "experimenter-normandy.svg"
+            },
+            {
+              "name": "Application Services",
+              "value": 37418,
+              "url": "https://github.com/mozilla/application-services",
+              "repoImg": "experimenter-app-services.svg"
+            },
+            {
+              "name": "Mozanalysis",
+              "value": 7708,
+              "url": "https://github.com/mozilla/mozanalysis",
+              "repoImg": "experimenter-mozanalysis.svg"
+            },
+            {
+              "name": "Jetstream",
+              "value": 3288,
+              "url": "https://github.com/mozilla/jetstream",
+              "repoImg": "experimenter-jetstream.svg"
+            },
+            {
+              "name": "Heartbeat",
+              "value": 43307,
+              "url": "https://github.com/mozilla/participation-heartbeat",
+              "repoImg": "experimenter-heartbeat.svg"
+            }
+          ]
+        },
+        {
+          "name": "Foxfooding",
+          "value": 1000,
+          "url": ""
+        },
+        {
+          "name": "Ideas@Mozilla",
+          "value": 1000,
+          "url": ""
+        },
+        {
+          "name": "Research",
+          "value": 1000,
+          "url": ""
+        },
+        {
+          "name": "Rally",
+          "value": 1000,
+          "url": ""
+        },
+        {
+          "name": "Labs",
+          "value": 1000,
+          "url": ""
+        },
+        {
+          "name": "Testpilot",
+          "children": [{ "name": "Shield", "value": 1000, "url": "" }]
+        },
+        {
+          "name": "Velocity",
+          "children": [{ "name": "UJET", "value": 1000, "url": "" }]
+        }
+      ]
+    },
+    {
+      "name": "Privacy & Security",
+      "children": [
+        {
+          "name": "Monitor",
+          "value": 50296,
+          "url": "https://github.com/mozilla/blurts-server",
+          "repoImg": "ps-monitor.svg"
+        },
+        {
+          "name": "Relay",
+          "children": [
+            {
+              "name": "service",
+              "value": 14632,
+              "url": "https://github.com/mozilla/fx-private-relay",
+              "repoImg": "ps-relay.svg"
+            },
+            {
+              "name": "addon",
+              "value": 6016,
+              "url": "https://github.com/mozilla/fx-private-relay-add-on",
+              "repoImg": "ps-relay-addon.svg"
+            }
+          ]
+        },
+        {
+          "name": "FPN",
+          "value": 4950,
+          "url": "https://github.com/mozilla/secure-proxy-shield-study",
+          "repoImg": "ps-fpn.svg"
+        },
+        {
+          "name": "VPN",
+          "value": 1387596,
+          "url": "https://github.com/mozilla-mobile/mozilla-vpn-client",
+          "repoImg": "ps-vpn-client.svg"
+        }
+      ]
+    },
+    {
+      "name": "Support Ecosystems",
+      "children": [
+        {
+          "name": "FxA",
+          "value": 298345,
+          "url": "https://github.com/mozilla/fxa",
+          "repoImg": "mozilla-fxa.svg"
+        },
+        {
+          "name": "Glean",
+          "children": [
+            {
+              "name": "Redash",
+              "value": 22088,
+              "url": "https://github.com/mozilla/redash",
+              "repoImg": "glean-redash.svg"
+            },
+            {
+              "name": "GLAM",
+              "value": 2006,
+              "url": "https://github.com/mozilla/glam",
+              "repoImg": "glean-glam.svg"
+            },
+            {
+              "name": "Glean",
+              "value": 203417,
+              "url": "https://github.com/mozilla/glean",
+              "repoImg": "glean.svg"
+            },
+            {
+              "name": "Dictionary",
+              "value": 32210,
+              "url": "https://github.com/mozilla/glean-dictionary",
+              "repoImg": "glean-dictionary.svg"
+            },
+            {
+              "name": "Glean.js",
+              "value": 21855,
+              "url": "https://github.com/mozilla/glean.js",
+              "repoImg": "gleanjs.svg"
+            },
+            {
+              "name": "Glean Parser",
+              "value": 4408,
+              "url": "https://github.com/mozilla/glean_parser",
+              "repoImg": "glean-parser.svg"
+            }
+          ]
+        },
+        {
+          "name": "Pontoon",
+          "value": 36458,
+          "url": "https://github.com/mozilla/pontoon",
+          "repoImg": "mozilla-pontoon.svg"
+        },
+        {
+          "name": "Megaphone",
+          "value": 400,
+          "url": "https://github.com/mozilla-services/megaphone",
+          "repoImg": "mozilla-megaphone.svg"
+        },
+        {
+          "name": "Push",
+          "value": 4502,
+          "url": "https://github.com/mozilla-services/autopush",
+          "repoImg": "mozilla-autopush.svg"
+        },
+        {
+          "name": "Bedrock",
+          "value": 667960,
+          "url": "https://github.com/mozilla/bedrock",
+          "repoImg": "mozilla-bedrock.svg"
+        },
+        {
+          "name": "Airflow",
+          "value": 1930,
+          "url": "https://github.com/mozilla/telemetry-airflow",
+          "repoImg": "mozilla-airflow.svg"
+        },
+        {
+          "name": "Socorro",
+          "value": 179378,
+          "url": "https://github.com/mozilla-services/socorro",
+          "repoImg": "mozilla-socorro.svg"
+        },
+        {
+          "name": "Task Cluster",
+          "value": 131138,
+          "url": "https://github.com/taskcluster/mozilla-taskcluster",
+          "repoImg": "mozilla-taskcluster.svg"
+        },
+        {
+          "name": "HTTPObservatory",
+          "value": 3540,
+          "url": "https://github.com/mozilla/http-observatory",
+          "repoImg": "mozilla-observatory.svg"
+        },
+        {
+          "name": "Searchfox",
+          "value": 3614,
+          "url": "https://github.com/mozsearch/mozsearch",
+          "repoImg": "mozilla-mozsearch.svg"
+        },
+        {
+          "name": "Bergamot",
+          "value": 567,
+          "url": "https://github.com/mozilla/bergamot-translator",
+          "repoImg": "mozilla-bergamot.svg"
+        }
+      ]
+    }
+  ]
+}

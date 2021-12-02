@@ -1279,13 +1279,13 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@heaversm/mozilla-ecosystem@https://api.observablehq.com/@heaversm/mozilla-ecosystem.tgz?v=3":
+  version "196.0.0"
+  resolved "https://api.observablehq.com/@heaversm/mozilla-ecosystem.tgz?v=3#fd617541333b7f5bd638c7bd605de0da6542d8e0"
+
 "@heaversm/zoomable-circle-packing@https://api.observablehq.com/@heaversm/zoomable-circle-packing.tgz?v=3":
   version "169.0.0"
   resolved "https://api.observablehq.com/@heaversm/zoomable-circle-packing.tgz?v=3#2721fe7159def4e1657ff791c42ba733eed4b597"
-
-"@heaversm/zoomable-circle-packing@https://api.observablehq.com/d/af5d6cdcba6dc5e7@169.tgz?v=3":
-  version "169.0.0"
-  resolved "https://api.observablehq.com/d/af5d6cdcba6dc5e7@169.tgz?v=3#e855cd594a6fd576bb0133fe34b3b60dc1d8f28c"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -7894,6 +7894,11 @@ micromatch@^4.0.2, micromatch@^4.0.4:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.2.3"
+
+micromodal@^0.4.10:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.10.tgz#d6f59c21d2f4a5af480f65909eb9608a1d558c73"
+  integrity sha512-BUrEnzMPFBwK8nOE4xUDYHLrlGlLULQVjpja99tpJQPSUEWgw3kTLp1n1qv0HmKU29AiHE7Y7sMLiRziDK4ghQ==
 
 miller-rabin@^4.0.0:
   version "4.0.1"
