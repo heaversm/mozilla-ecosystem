@@ -27,7 +27,9 @@ function Modal({ data }) {
           aria-labelledby="modal-1-title"
         >
           <div className="flx space-between cntr modal__header">
-            <h2 className="modal__title" id="modal-1-title"></h2>
+            <h2 className="modal__title" id="modal-1-title">
+              Repo Visualization
+            </h2>
             <button
               className="modal__close"
               aria-label="Close modal"

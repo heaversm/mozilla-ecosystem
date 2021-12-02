@@ -100,13 +100,13 @@ Click to zoom in or out.`;
           .on("click", (event, d) => {
             if (!d.data.repoImg) {
               if (focus !== d) {
-                return zoom(event, d), event.stopPropagation();
+                event.stopPropagation();
+                return zoom(event, d);
               }
             } else {
               event.stopPropagation();
               event.preventDefault();
               const { repoImg, name } = d.data;
-              console.log("click", event.currentTarget, d.data.value);
               const $modal = document.getElementById("modal");
               const $modalTitle = $modal.querySelector(".modal__title");
               const $modalImg = $modal.querySelector(".modal__img");
@@ -135,7 +135,7 @@ Click to zoom in or out.`;
         }
 
         function zoom(event, d) {
-          const focus0 = focus;
+          // const focus0 = focus;
 
           focus = d;
 
