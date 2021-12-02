@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@heaversm/mozilla-ecosystem": "https://api.observablehq.com/@heaversm/mozilla-ecosystem.tgz?v=3",
-    "@heaversm/zoomable-circle-packing": "https://api.observablehq.com/@heaversm/zoomable-circle-packing.tgz?v=3",
     "@observablehq/runtime": "4",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",

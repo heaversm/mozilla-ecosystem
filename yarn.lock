@@ -1279,14 +1279,6 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@heaversm/mozilla-ecosystem@https://api.observablehq.com/@heaversm/mozilla-ecosystem.tgz?v=3":
-  version "196.0.0"
-  resolved "https://api.observablehq.com/@heaversm/mozilla-ecosystem.tgz?v=3#fd617541333b7f5bd638c7bd605de0da6542d8e0"
-
-"@heaversm/zoomable-circle-packing@https://api.observablehq.com/@heaversm/zoomable-circle-packing.tgz?v=3":
-  version "169.0.0"
-  resolved "https://api.observablehq.com/@heaversm/zoomable-circle-packing.tgz?v=3#2721fe7159def4e1657ff791c42ba733eed4b597"
-
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
